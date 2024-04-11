@@ -3,6 +3,7 @@
 namespace Wendelulhoa\WuDiscordLogger;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 
 class ServiceProviderWuDiscordLogger extends ServiceProvider
 {
