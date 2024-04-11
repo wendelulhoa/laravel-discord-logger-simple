@@ -24,7 +24,14 @@
     },
     "autoload": {
         "psr-4": {
-            "wendelulhoa\\DiscordLogger\\": "src/"
+            "wendelulhoa\\WuDiscordLogger\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "wendelulhoa\\WuDiscordLogger\\ServiceProviderWuDiscordLogger"
+            ]
         }
     },
     "minimum-stability": "stable"
