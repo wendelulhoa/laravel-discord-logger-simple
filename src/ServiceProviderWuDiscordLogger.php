@@ -13,7 +13,6 @@ class ServiceProviderWuDiscordLogger extends ServiceProvider
          if (!Str::contains($this->app->version(), 'Lumen')) {
              $this->mergeConfigFrom(__DIR__ . '/../../config/wu-discord-logger.php', 'wu-discord-logger');
          }
-         $this->registerContainerBindings();
      }
  
      /** @return void */
