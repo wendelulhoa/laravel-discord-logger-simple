@@ -4,7 +4,7 @@ namespace Wendelulhoa\WuDiscordLogger;
 
 use Illuminate\Support\ServiceProvider;
 
-class ConfigPublishServiceProvider extends ServiceProvider
+class ServiceProviderWuDiscordLogger extends ServiceProvider
 {
     /**
      * Register services.

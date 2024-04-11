@@ -16,6 +16,14 @@ composer wendelulhoa/laravel-discord-logger-simple
 
 ## Setup
 
+```php
+// config/app.php
+'providers' => [
+    ...
+    Wendelulhoa\WuDiscordLogger\ServiceProviderWuDiscordLogger::class
+];
+```
+
 ### Prepare the discord channel web hook
 
 Create a discord web hook for the channel which will receive the logs.
@@ -47,7 +55,7 @@ LOG_DISCORD_WEBHOOK_URL=https://discordapp.com/api/webhooks/abcerd/1234
 You can then publish the configuration file:
 
 ```
-php artisan vendor:publish --provider "Wendelulhoa\WuDiscordLogger\ServiceProvider"
+php artisan vendor:publish --provider "Wendelulhoa\WuDiscordLogger\ServiceProviderWuDiscordLogger"
 ```
 
 ### Use the logger channel
