@@ -44,6 +44,12 @@ You can then provide the web-hook URL in your `.env` file:
 LOG_DISCORD_WEBHOOK_URL=https://discordapp.com/api/webhooks/abcerd/1234
 ```
 
+You can then publish the configuration file:
+
+```
+php artisan vendor:publish --provider "Wendelulhoa\WuDiscordLogger\ServiceProvider"
+```
+
 ### Use the logger channel
 
 You have two options: log only to discord or add the channel to the stack
