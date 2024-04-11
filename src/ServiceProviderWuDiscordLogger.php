@@ -11,7 +11,7 @@ class ServiceProviderWuDiscordLogger extends ServiceProvider
      public function register()
      {
          if (!Str::contains($this->app->version(), 'Lumen')) {
-             $this->mergeConfigFrom(__DIR__ . '/../../config/wu-discord-logger.php', 'wu-discord-logger');
+             $this->mergeConfigFrom(__DIR__ . '/../config/wu-discord-logger.php', 'wu-discord-logger');
          }
      }
  
@@ -21,7 +21,7 @@ class ServiceProviderWuDiscordLogger extends ServiceProvider
          if (Str::contains($this->app->version(), 'Lumen')) {
              $this->app->configure('wu-discord-logger');
          } else {
-             $this->publishes([__DIR__ . '/../../config/wu-discord-logger.php' => config_path('wu-discord-logger.php')], 'config');
+             $this->publishes([__DIR__ . '/../config/wu-discord-logger.php' => config_path('wu-discord-logger.php')], 'config');
          }
      }
 }
