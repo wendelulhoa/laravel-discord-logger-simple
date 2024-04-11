@@ -1,5 +1,5 @@
 {
-    "name": "wu/laravel-discord-logger-simple",
+    "name": "wendelulhoa/laravel-discord-logger-simple",
     "description": "Logging to a discord channel in Laravel",
     "keywords": [
         "laravel",
@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WU\\DiscordLogger\\": "src/"
+            "wendelulhoa\\DiscordLogger\\": "src/"
         }
     },
     "minimum-stability": "stable"

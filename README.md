@@ -11,7 +11,7 @@
 You can install the package via composer:
 
 ``` bash
-composer wu/laravel-discord-logger-simple
+composer wendelulhoa/laravel-discord-logger-simple
 ```
 
 ## Setup

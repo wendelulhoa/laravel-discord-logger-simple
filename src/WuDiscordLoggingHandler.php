@@ -1,6 +1,6 @@
 <?php
 
-namespace WU\WuDiscordLogger;
+namespace Wendelulhoa\WuDiscordLogger;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Http;
