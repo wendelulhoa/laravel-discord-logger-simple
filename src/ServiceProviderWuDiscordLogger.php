@@ -6,32 +6,22 @@ use Illuminate\Support\ServiceProvider;
 
 class ServiceProviderWuDiscordLogger extends ServiceProvider
 {
-    /**
-     * Register services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
-
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        if (!file_exists(config_path('wu-discord-logger.php'))) {
-            $this->publishes([
-                __DIR__ . '/../../config/wu-discord-logger.php' => config_path('wu-discord-logger.php'),
-            ], 'config');
-        }
-
-        $this->mergeConfigFrom(
-            __DIR__ . '/../../config/wu-discord-logger.php', 'wu-discord-logger'
-        );
-    }
-
+     /** @return void */
+     public function register()
+     {
+         if (!Str::contains($this->app->version(), 'Lumen')) {
+             $this->mergeConfigFrom(__DIR__ . '/../../config/wu-discord-logger.php', 'wu-discord-logger');
+         }
+         $this->registerContainerBindings();
+     }
+ 
+     /** @return void */
+     public function boot()
+     {
+         if (Str::contains($this->app->version(), 'Lumen')) {
+             $this->app->configure('wu-discord-logger');
+         } else {
+             $this->publishes([__DIR__ . '/../../config/wu-discord-logger.php' => config_path('wu-discord-logger.php')], 'config');
+         }
+     }
 }
